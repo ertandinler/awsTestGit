@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Ana Sayfa - {{ block.super }} {% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+{#        <div class="row" style="margin-bottom: 30px;">#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #fff517; height: 100px;">1. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #7a3829; height: 100px;">2. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #66f635; height: 100px;">3. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #161a9d; height: 100px;">4. sütun</div>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="container-fluid">#}
+{#        <div class="row" style="margin-bottom: 30px;">#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #fff517; height: 100px;">1. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #7a3829; height: 100px;">2. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #66f635; height: 100px;">3. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #161a9d; height: 100px;">4. sütun</div>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="container-fluid">#}
+{#        <div class="row" style="margin-bottom: 30px;">#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #fff517; height: 100px;">1. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #7a3829; height: 100px;">2. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #66f635; height: 100px;">3. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #161a9d; height: 100px;">4. sütun</div>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="container-fluid">#}
+{#        <div class="row" style="margin-bottom: 30px;">#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #fff517; height: 100px;">1. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #7a3829; height: 100px;">2. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #66f635; height: 100px;">3. sütun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #161a9d; height: 100px;">4. sütun</div>#}
+{#        </div>#}
+
+
+        <div class="row">
+            <div class="col-md-4" style="background-color: #66f635; height: 100px;"></div>
+            <div class="col-md-8" style="background-color: #f64fdb; height: 100px;">
+                <div class="row">
+                    <div class="col-md-2" style="background-color: #218838; height: 100px;"></div>
+                    <div class="col-md-6" style="background-color: #b54623; height: 100px;"></div>
+                    <div class="col-md-4" style="background-color: #881b78; height: 100px;"></div>
+                </div>
+            </div>
+        </div>
+    Hoşgeldiniz, {{ request.user.get_full_name }}
+    </div>
+
+{% endblock %}

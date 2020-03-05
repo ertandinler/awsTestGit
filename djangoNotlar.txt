@@ -1,0 +1,46 @@
+
+if request.user.is_authenticated():
+    context = {
+        'isim': 'Barış',
+    }
+else:
+    context = {
+        'isim': 'Misafir',
+    }
+
+SingletonCookie
+SingletonLock
+SingletonSocket
+
+﻿---------------sanal ortam kurulumu virtualenv---------
+
+pip install virtualenv  	(sanal ortam kurar)
+python -m virtualenv venvBlog		(venvBlog ad�nda bir sanal ortam kurar)
+
+venvBlog\Scripts\activate	(venvBlog ad�ndaki sanal ortam� aktif eder)
+venvBlog\Scripts\deactivate	(aktif olan sanal ortam� deaktif eder)
+
+source venvBlog/bin/avtive	(linux i�in aktif)
+source venvBlog/bin/deavtive	(linux i�in deaktif)
+
+
+---------------- django-----------------
+python manage.py runserver 8080 	(8080 portunda ve localhost olarak uygulamay� �al��t�r�r)
+
+pyton manage.py migrate             (settings dosyasında bulunan INSTALLED_APPS kısmındaki hazir uygulamaların veritabanı için kurulumunu ve projeye
+                                        dahir edilmesini sağlar.)
+python manage.py createsuperuser        (django dahili admin paneli için tam yetkili kullanıcı tanımlar. blog123+)
+
+python .\manage.py startapp post       (post adında bir uygulama app oluşturur. djangoda proje uygulamalara bölünür.
+                                        settings dosyasında INSTALLED_APPS bölümüne eklenir.)
+python manage.py installap
+python manage.py makemigrations		(modeller oluşturulduktan sonra bu komut çalıştırılır. uygulamada migrations klasöründe 0001_initial.py adında py dosyası oluşturulduktan
+                                     bu dosyada veritabanı düzeni yer alır.)
+----------------------
+{% if not request.user.is_authenticated %}
+
+                    <li><a href="{% url 'accounts:register' %}">Üye Ol</a></li>
+                    <li><a href="{% url 'accounts:login' %}">Giriş</a></li>
+                {% else %}
+                    <li><a href="{% url 'accounts:logout' %}">Çıkış</a></li>
+                {% endif %}
